@@ -12,7 +12,7 @@ void main() {
       '/home': (context) => Home(),
       '/location': (context) => ChooseLocation(),
     },
-    initialRoute: '/home',
+    initialRoute: '/',
   ));
 }
 
