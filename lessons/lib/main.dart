@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
@@ -13,16 +13,13 @@ void main(){
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-            )
+            ),
           ),
           child: const Center(
             child: Text(
               "Unus Wallet",
-              style: TextStyle(
-                fontSize: 28,
-                color: Colors.white,
-              ),
-            )
+              style: TextStyle(fontSize: 28, color: Colors.white),
+            ),
           ),
         ),
       ),
@@ -34,13 +31,7 @@ class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
 
   @override
-  Widget build (BuildContext context){
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: colors[
-          Color.alphaBlend(, background)
-        ])
-      ),
-    )
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
