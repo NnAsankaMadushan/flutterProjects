@@ -2,21 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:lessons/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key, required this.colors});
+  const GradientContainer(this.color1, this.color2, {super.key});
+  const GradientContainer.purple({super.key})
+      : color1 = Colors.deepPurple,
+        color2 = Colors.indigo;
 
-  final List<Color> colors;
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration:  BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: colors,
+          colors: [color1, color2],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
       ),
-      child: const Center(child: StyledText("Unus Wall")),
+      child:  Center(
+        child: Image.asset('assets/dice.jpg', width: 200),
+      ),
     );
   }
 }
